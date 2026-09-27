@@ -1,0 +1,145 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	objectVersion = 56;
+	classes = {};
+	objects = {
+
+/* Begin PBXFileReference section */
+		1263D73BB381A4FD90417F12 /* BlobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlobApp.swift; path = BlobApp.swift; sourceTree = "<group>"; };
+		6A99A1CC12EBEBCE1D047A3D /* Blobatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Blobatar.swift; path = Blobatar/Blobatar.swift; sourceTree = "<group>"; };
+		D0C255039E32F12757F0EA63 /* BlobatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlobatarView.swift; path = Blobatar/BlobatarView.swift; sourceTree = "<group>"; };
+		116917D322D874D94AC804D0 /* SilhouetteShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SilhouetteShapes.swift; path = Blobatar/SilhouetteShapes.swift; sourceTree = "<group>"; };
+		B2D11C15241179D139E651D8 /* AudioLevelMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioLevelMeter.swift; path = Audio/AudioLevelMeter.swift; sourceTree = "<group>"; };
+		5EF0FDCF2A9933891DA3AA78 /* SpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpeechEngine.swift; path = Audio/SpeechEngine.swift; sourceTree = "<group>"; };
+		AE670AEEAE776DCCB80A82B3 /* SpeakerSegmenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpeakerSegmenter.swift; path = Audio/SpeakerSegmenter.swift; sourceTree = "<group>"; };
+		63D37E52D2218AEDAA31916C /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Summary.swift; path = Intelligence/Summary.swift; sourceTree = "<group>"; };
+		579C3EBB80E228B6687DD04E /* TodoExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoExtractor.swift; path = Intelligence/TodoExtractor.swift; sourceTree = "<group>"; };
+		5B6A2BE49E2A4E8BB1A05BF8 /* LocalSummarizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalSummarizer.swift; path = Intelligence/LocalSummarizer.swift; sourceTree = "<group>"; };
+		12C296FE7BE2D9C23D055315 /* MistralSummarizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MistralSummarizer.swift; path = Intelligence/MistralSummarizer.swift; sourceTree = "<group>"; };
+		5D5272188DE34881947E5B29 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = UI/MainView.swift; sourceTree = "<group>"; };
+		75A6493C005767B72A4B9016 /* TranscriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranscriptView.swift; path = UI/TranscriptView.swift; sourceTree = "<group>"; };
+		105939DF4CDFF4461CABDD2F /* SummaryPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SummaryPanel.swift; path = UI/SummaryPanel.swift; sourceTree = "<group>"; };
+		CAB1D93D68ED6936D165A0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Info.plist; sourceTree = "<group>"; };
+		5521736F1E7B29E0DCE574EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5633E2CACA25304C9EF807D /* Products */ = {isa = PBXGroup; children = (6E2EF0008C5075B40DC2ECED /* Blob.app */); name = Products; sourceTree = "<group>"; };
+		6E2EF0008C5075B40DC2ECED /* Blob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXBuildFile section */
+		A216EE7CCE3F63452245A330 /* BlobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1263D73BB381A4FD90417F12 /* BlobApp.swift */; };
+		84908086322F2E24DEA486FD /* Blobatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A99A1CC12EBEBCE1D047A3D /* Blobatar.swift */; };
+		BFC04F84AFC96057E780D4E2 /* BlobatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C255039E32F12757F0EA63 /* BlobatarView.swift */; };
+		7BAB20EB553374F5657A9959 /* SilhouetteShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116917D322D874D94AC804D0 /* SilhouetteShapes.swift */; };
+		FD0C21165E44127088D3BB54 /* AudioLevelMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D11C15241179D139E651D8 /* AudioLevelMeter.swift */; };
+		F932AC3A7419A4771B31A8B1 /* SpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF0FDCF2A9933891DA3AA78 /* SpeechEngine.swift */; };
+		5DD241037286901BC46B9544 /* SpeakerSegmenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE670AEEAE776DCCB80A82B3 /* SpeakerSegmenter.swift */; };
+		6DF29CCDEAA65E183DAC20FC /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D37E52D2218AEDAA31916C /* Summary.swift */; };
+		692C2BC47276DC4625B42E67 /* TodoExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C3EBB80E228B6687DD04E /* TodoExtractor.swift */; };
+		C289296C1AFFC6AECF58A30B /* LocalSummarizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6A2BE49E2A4E8BB1A05BF8 /* LocalSummarizer.swift */; };
+		65FA0C0B98F2787683E44894 /* MistralSummarizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C296FE7BE2D9C23D055315 /* MistralSummarizer.swift */; };
+		DF43A0C484ABC471C705DAA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5272188DE34881947E5B29 /* MainView.swift */; };
+		8C779B9C36F70A016120CA27 /* TranscriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A6493C005767B72A4B9016 /* TranscriptView.swift */; };
+		14DFE5D75580BE1977532349 /* SummaryPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105939DF4CDFF4461CABDD2F /* SummaryPanel.swift */; };
+		B33E4330285780504D8B302C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5521736F1E7B29E0DCE574EB /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXGroup section */
+		4A8DE18E246FE692271B3DBE = {isa = PBXGroup; children = (6A99A1CC12EBEBCE1D047A3D, D0C255039E32F12757F0EA63, 116917D322D874D94AC804D0); name = Blobatar; sourceTree = "<group>"; };
+		16C2F64347C2EF8EB8D8C207 = {isa = PBXGroup; children = (B2D11C15241179D139E651D8, 5EF0FDCF2A9933891DA3AA78, AE670AEEAE776DCCB80A82B3); name = Audio; sourceTree = "<group>"; };
+		96C1DD740C8E8B0E69830F5B = {isa = PBXGroup; children = (63D37E52D2218AEDAA31916C, 579C3EBB80E228B6687DD04E, 5B6A2BE49E2A4E8BB1A05BF8, 12C296FE7BE2D9C23D055315); name = Intelligence; sourceTree = "<group>"; };
+		9AFF206DDB8462CE5B3A029D = {isa = PBXGroup; children = (5D5272188DE34881947E5B29, 75A6493C005767B72A4B9016, 105939DF4CDFF4461CABDD2F); name = UI; sourceTree = "<group>"; };
+		74A128AEEB1E767E18D975AA = {isa = PBXGroup; children = (1263D73BB381A4FD90417F12, 4A8DE18E246FE692271B3DBE, 16C2F64347C2EF8EB8D8C207, 96C1DD740C8E8B0E69830F5B, 9AFF206DDB8462CE5B3A029D, 5521736F1E7B29E0DCE574EB, CAB1D93D68ED6936D165A0D2); name = Blob; sourceTree = "<group>"; };
+		564A03336E57A1DDBA1316BE = {isa = PBXGroup; children = (74A128AEEB1E767E18D975AA); name = ""; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		485AE48EF13FA9C6F641004C /* Blob */ = {isa = PBXNativeTarget; buildConfigurationList = 2986DEF318999D14FF3C72BE /* Build configuration list for PBXNativeTarget "Blob" */; buildPhases = (6979ABF476862C5B05AA7A82 /* Sources */, BC951D8C942A3D9F5D108798 /* Resources */); buildRules = (); dependencies = (); name = Blob; productName = Blob; productReference = 6E2EF0008C5075B40DC2ECED /* Blob.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D7CAA0AF10DF99D8057033F /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500;}; buildConfigurationList = CA54706F801CEB177B6D0282 /* Build configuration list for PBXProject "Blob" */; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es, en, Base); mainGroup = 564A03336E57A1DDBA1316BE; productRefGroup = A5633E2CACA25304C9EF807D /* Products */; projectDirPath = ""; projectRoot = ""; targets = (485AE48EF13FA9C6F641004C /* Blob */); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC951D8C942A3D9F5D108798 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (B33E4330285780504D8B302C /* Assets.xcassets in Resources */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6979ABF476862C5B05AA7A82 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A216EE7CCE3F63452245A330 /* BlobApp.swift in Sources */, 84908086322F2E24DEA486FD /* Blobatar.swift in Sources */, BFC04F84AFC96057E780D4E2 /* BlobatarView.swift in Sources */, 7BAB20EB553374F5657A9959 /* SilhouetteShapes.swift in Sources */, FD0C21165E44127088D3BB54 /* AudioLevelMeter.swift in Sources */, F932AC3A7419A4771B31A8B1 /* SpeechEngine.swift in Sources */, 5DD241037286901BC46B9544 /* SpeakerSegmenter.swift in Sources */, 6DF29CCDEAA65E183DAC20FC /* Summary.swift in Sources */, 692C2BC47276DC4625B42E67 /* TodoExtractor.swift in Sources */, C289296C1AFFC6AECF58A30B /* LocalSummarizer.swift in Sources */, 65FA0C0B98F2787683E44894 /* MistralSummarizer.swift in Sources */, DF43A0C484ABC471C705DAA5 /* MainView.swift in Sources */, 8C779B9C36F70A016120CA27 /* TranscriptView.swift in Sources */, 14DFE5D75580BE1977532349 /* SummaryPanel.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2C8703FBD7B4E4A8BE81EAA /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+				SWIFT_OPTIMIZATION_LEVEL = -Onone;
+				ONLY_ACTIVE_ARCH = YES;
+			}; name = Debug; };
+		A53EAAB4775251377B5D6D27 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+				SWIFT_OPTIMIZATION_LEVEL = -O;
+				VALIDATE_PRODUCT = YES;
+			}; name = Release; };
+		03DA394059005B847D78D21F /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Blob/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Blob;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.blob.app;
+				PRODUCT_NAME = $(TARGET_NAME);
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = -Onone;
+			}; name = Debug; };
+		C5BF8F491D067160F9DEFD4B /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Blob/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Blob;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.blob.app;
+				PRODUCT_NAME = $(TARGET_NAME);
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = -O;
+			}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA54706F801CEB177B6D0282 /* Build configuration list for PBXProject "Blob" */ = {isa = XCConfigurationList; buildConfigurations = (F2C8703FBD7B4E4A8BE81EAA /* Debug */, A53EAAB4775251377B5D6D27 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		2986DEF318999D14FF3C72BE /* Build configuration list for PBXNativeTarget "Blob" */ = {isa = XCConfigurationList; buildConfigurations = (03DA394059005B847D78D21F /* Debug */, C5BF8F491D067160F9DEFD4B /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 2D7CAA0AF10DF99D8057033F /* Project object */;
+}
