@@ -17,23 +17,39 @@ Funcionalidad básica operativa (MVP):
 5. **Resumen**: local (frases clave + to-dos) o vía Mistral AI si hay key configurada.
 6. **Blob vivo**: blobatar que reacciona — respira en reposo, se agranda cuando detecta voz y "mira" el nivel de audio en tiempo real.
 
-## Build (Mac)
+## Ejecutar SIN Xcode (app normal .app)
+
+Solo necesitas las **Command Line Tools** (gratuitas, ~1.5 GB, sin Xcode):
+
+```bash
+xcode-select --install   # si no las tienes ya
+```
+
+Descarga o clona el repo, y dentro de la carpeta:
+
+```bash
+bash build_app.sh
+```
+
+El script compila con `swift build`, empaqueta **Blob.app**, genera el icono y la firma. Luego:
+
+```bash
+cp -R Blob.app /Applications/   # instalar como app más
+```
+
+Ábrela desde Finder o Launchpad. **La primera vez**: clic derecho sobre Blob → **Abrir** → confirmar (macOS es desconfiado con apps sin firma de desarrollador).
+
+Pedirá permiso de **micrófono** y **reconocimiento de voz** → acepta ambos.
+
+## Ejecutar CON Xcode (para desarrollo)
 
 Requiere Xcode 15+ y macOS 13+.
 
 ```bash
-open Blob.xcodeproj        # y Cmd+R
+open Blob.xcodeproj   # y Cmd+R
 ```
 
-O vía CLI:
-
-```bash
-xcodebuild -project Blob.xcodeproj -scheme Blob -configuration Debug build
-```
-
-La primera vez macOS pedirá permiso de **micrófono** y **reconocimiento de voz** (Speech). Acepta ambos.
-
-### Mistral AI (opcional)
+## Mistral AI (opcional)
 
 En la app: Blob → Ajustes → pega tu `MISTRAL_API_KEY`. Sin key, todo funciona en local.
 
@@ -41,34 +57,23 @@ En la app: Blob → Ajustes → pega tu `MISTRAL_API_KEY`. Sin key, todo funcion
 
 ```
 Blob/
-├── Blob.xcodeproj/project.pbxproj      # proyecto Xcode generado
+├── Package.swift                  # compilación sin Xcode (swift build)
+├── build_app.sh                    # empaqueta Blob.app (sin Xcode)
+├── Blob.xcodeproj/project.pbxproj  # proyecto Xcode (alternativa)
 ├── Blob/
-│   ├── BlobApp.swift                   # @main, menú
-│   ├── Info.plist                      # NSMicrophoneUsageDescription, NSSpeechRecognitionUsageDescription
-│   ├── Assets.xcassets/                # AppIcon, colores
-│   ├── Blobatar/
-│   │   ├── Blobatar.swift              # generador determinista (hash → forma + color)
-│   │   ├── BlobatarView.swift          # Canvas SwiftUI + animación (respiración, voz, mirada)
-│   │   └── SilhouetteShapes.swift      # 10 siluetas como Path
-│   ├── Audio/
-│   │   ├── SpeechEngine.swift          # SFSpeechRecognizer + AVAudioEngine, buffer live
-│   │   ├── SpeakerSegmenter.swift      # separación de turnos: pausas + energía + ritmo
-│   │   └── AudioLevelMeter.swift       # RMS / dBFS en vivo
-│   ├── Intelligence/
-│   │   ├── TodoExtractor.swift         # NLTagger: verbos de compromiso + plazos
-│   │   ├── LocalSummarizer.swift       # resumen offline (TF simplificado + to-dos)
-│   │   ├── MistralSummarizer.swift     # conector opcional a Mistral API
-│   │   └── Summary.swift               # modelo (SummaryItem, Todo)
-│   └── UI/
-│       ├── MainView.swift             # ventana principal
-│       ├── TranscriptView.swift        # lista de turnos
-│       ├── SummaryPanel.swift          # resumen + to-dos
-│       └── SettingsView.swift          # idioma, Mistral key, sensibilidad
+│   ├── BlobApp.swift               # @main, menú
+│   ├── Info.plist                  # permisos mic + speech
+│   ├── Blobatar/                   # generador determinista + vista viva
+│   ├── Audio/                      # SpeechEngine, SpeakerSegmenter, AudioLevelMeter
+│   ├── Intelligence/              # TodoExtractor, LocalSummarizer, MistralSummarizer
+│   └── UI/                         # MainView, TranscriptView, SummaryPanel
 └── Scripts/
-    └── test_logic.py                   # verificación de la lógica determinista
+    ├── test_logic.py              # tests de la lógica (10, todos pasan)
+    ├── gen_icon.py                 # generador del icono
+    └── gen_project.py              # regenerador del .xcodeproj
 ```
 
 ## Notas
 
-- El proyecto se verificó con lógica pura (ver `Scripts/test_logic.py`): determinismo del blobatar, segmentación de hablante y extracción de to-dos, todo portado 1:1 a Python. Compilar y ejecutar es un paso en Mac.
+- Lógica verificada con port Python (`Scripts/test_logic.py`): determinismo del blobatar, segmentación de hablante y extracción de to-dos. 10/10 tests OK.
 - El blobatar es una implementación original en Swift inspirada en el concepto de blobatar.dev (mismo string → mismo avatar) y no usa código de blobatar.
